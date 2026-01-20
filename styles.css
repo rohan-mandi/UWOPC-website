@@ -8,7 +8,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #000;
+    background-color: #171716;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
@@ -24,9 +24,9 @@ body {
 }
 
 #navbar.scrolled {
-    background-color: rgba(17, 24, 39, 0.95);
+    background-color: rgba(23, 23, 22, 0.95);
     backdrop-filter: blur(12px);
-    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 4px 6px rgba(81, 60, 98, 0.2);
 }
 
 .nav-container {
@@ -46,17 +46,13 @@ body {
     cursor: pointer;
 }
 
-.logo-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(to bottom right, #7c3aed, #9333ea);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
+
+
 
 .logo-text {
     font-size: 1.5rem;
@@ -65,7 +61,7 @@ body {
 }
 
 .logo-purple {
-    color: #a78bfa;
+    color: #9F86B0;
 }
 
 .nav-links {
@@ -86,7 +82,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #a78bfa;
+    color: #9F86B0;
 }
 
 .mobile-menu-btn {
@@ -125,9 +121,9 @@ body {
 
 .mobile-menu {
     display: none;
-    background-color: rgba(17, 24, 39, 0.98);
+    background-color: rgba(23, 23, 22, 0.98);
     backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(124, 58, 237, 0.3);
+    border-top: 1px solid rgba(81, 60, 98, 0.3);
 }
 
 .mobile-menu.active {
@@ -149,7 +145,7 @@ body {
 }
 
 .mobile-link:hover {
-    background-color: rgba(124, 58, 237, 0.2);
+    background-color: rgba(81, 60, 98, 0.2);
 }
 
 /* Pages */
@@ -181,7 +177,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom right, rgba(88, 28, 135, 0.4), #111827, #000);
+    background: linear-gradient(to bottom right, rgba(81, 60, 98, 0.4), #171716, #000);
 }
 
 .hero-grid {
@@ -242,20 +238,20 @@ body {
 }
 
 .text-purple {
-    color: #a78bfa;
+    color: #9F86B0;
 }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(to right, #7c3aed, #9333ea);
+    background: linear-gradient(to right, #513C62, #6A4E80);
     color: #fff;
     padding: 1rem 2.5rem;
     border-radius: 9999px;
     font-size: 1.125rem;
     font-weight: bold;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -263,7 +259,7 @@ body {
 
 .cta-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 20px 40px rgba(81, 60, 98, 0.5);
 }
 
 .cta-arrow {
@@ -287,22 +283,22 @@ body {
 }
 
 .card {
-    background-color: rgba(17, 24, 39, 0.8);
+    background-color: rgba(23, 23, 22, 0.8);
     backdrop-filter: blur(12px);
     padding: 2rem;
     border-radius: 1rem;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    border-color: #9333ea;
-    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+    border-color: #6A4E80;
+    box-shadow: 0 20px 40px rgba(81, 60, 98, 0.3);
     transform: translateY(-8px);
 }
 
 .card-icon {
-    color: #a78bfa;
+    color: #9F86B0;
     margin-bottom: 1rem;
 }
 
@@ -331,10 +327,10 @@ body {
 }
 
 .about-box {
-    background: linear-gradient(to right, rgba(88, 28, 135, 0.4), rgba(17, 24, 39, 0.6));
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.4), rgba(23, 23, 22, 0.6));
     border-radius: 1.5rem;
     padding: 3rem;
-    border: 2px solid rgba(124, 58, 237, 0.5);
+    border: 2px solid rgba(81, 60, 98, 0.5);
     backdrop-filter: blur(4px);
 }
 
@@ -381,20 +377,20 @@ body {
 
 /* Leadership */
 .president-card {
-    background: linear-gradient(135deg, rgba(109, 40, 217, 0.4), rgba(88, 28, 135, 0.4));
+    background: linear-gradient(135deg, rgba(81, 60, 98, 0.4), rgba(60, 40, 80, 0.4));
     backdrop-filter: blur(12px);
     padding: 3rem;
     border-radius: 1.5rem;
-    border: 3px solid #9333ea;
+    border: 3px solid #6A4E80;
     text-align: center;
     margin-bottom: 3rem;
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+    box-shadow: 0 10px 30px rgba(81, 60, 98, 0.4);
     transition: all 0.3s ease;
 }
 
 .president-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 15px 40px rgba(81, 60, 98, 0.6);
 }
 
 .president-card .leader-emoji {
@@ -404,14 +400,21 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .vp-section-title {
     font-size: 1.75rem;
     font-weight: bold;
-    color: #a78bfa;
+    color: #9F86B0;
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -425,19 +428,19 @@ body {
 }
 
 .leader-card {
-    background-color: rgba(17, 24, 39, 0.8);
+    background-color: rgba(23, 23, 22, 0.8);
     backdrop-filter: blur(12px);
     padding: 2rem 1.5rem;
     border-radius: 1rem;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .leader-card:hover {
-    border-color: #9333ea;
+    border-color: #6A4E80;
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 10px 25px rgba(81, 60, 98, 0.3);
 }
 
 .leader-emoji {
@@ -449,7 +452,7 @@ body {
 .leader-role-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #a78bfa;
+    color: #9F86B0;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -470,10 +473,10 @@ body {
 
 /* Membership */
 .membership-box {
-    background: linear-gradient(to right, rgba(88, 28, 135, 0.4), rgba(17, 24, 39, 0.6));
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.4), rgba(23, 23, 22, 0.6));
     border-radius: 1.5rem;
     padding: 3rem;
-    border: 2px solid rgba(124, 58, 237, 0.5);
+    border: 2px solid rgba(81, 60, 98, 0.5);
 }
 
 .membership-info {
@@ -497,16 +500,16 @@ body {
 }
 
 .event-card {
-    background-color: rgba(17, 24, 39, 0.8);
+    background-color: rgba(23, 23, 22, 0.8);
     backdrop-filter: blur(12px);
     padding: 1.5rem;
     border-radius: 1rem;
-    border: 2px solid rgba(124, 58, 237, 0.5);
+    border: 2px solid rgba(81, 60, 98, 0.5);
 }
 
 .event-card.featured {
-    background: linear-gradient(to right, rgba(109, 40, 217, 0.3), rgba(124, 58, 237, 0.3));
-    border-color: #9333ea;
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.3), rgba(106, 78, 128, 0.3));
+    border-color: #6A4E80;
 }
 
 .event-title {
@@ -516,7 +519,7 @@ body {
 }
 
 .event-title.purple {
-    color: #a78bfa;
+    color: #9F86B0;
 }
 
 .event-title.white {
@@ -529,11 +532,11 @@ body {
 
 /* Socials */
 .socials-box {
-    background-color: rgba(17, 24, 39, 0.8);
+    background-color: rgba(23, 23, 22, 0.8);
     backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 1rem;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
 }
 
 .socials-links {
@@ -547,19 +550,19 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: linear-gradient(to right, #7c3aed, #9333ea);
+    background: linear-gradient(to right, #513C62, #6A4E80);
     color: #fff;
     padding: 1rem 2rem;
     border-radius: 9999px;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
     transition: all 0.3s ease;
 }
 
 .social-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 20px 40px rgba(81, 60, 98, 0.5);
 }
 
 /* Rankings */
@@ -580,10 +583,10 @@ body {
 }
 
 .rankings-table-container {
-    background-color: rgba(17, 24, 39, 0.8);
+    background-color: rgba(23, 23, 22, 0.8);
     backdrop-filter: blur(12px);
     border-radius: 1rem;
-    border: 2px solid #7c3aed;
+    border: 2px solid #513C62;
     overflow: hidden;
     margin-bottom: 2.5rem;
 }
@@ -594,7 +597,7 @@ body {
 }
 
 .rankings-table thead {
-    background: linear-gradient(to right, rgba(109, 40, 217, 0.6), rgba(88, 28, 135, 0.6));
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.6), rgba(60, 40, 80, 0.6));
 }
 
 .rankings-table th {
@@ -608,16 +611,16 @@ body {
 }
 
 .rankings-table tbody tr {
-    border-top: 1px solid rgba(124, 58, 237, 0.3);
+    border-top: 1px solid rgba(81, 60, 98, 0.3);
     transition: background-color 0.3s ease;
 }
 
 .rankings-table tbody tr:hover {
-    background-color: rgba(124, 58, 237, 0.2);
+    background-color: rgba(81, 60, 98, 0.2);
 }
 
 .rankings-table tbody tr.podium {
-    background: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(124, 58, 237, 0.3));
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.3), rgba(106, 78, 128, 0.3));
 }
 
 .rankings-table td {
@@ -654,7 +657,7 @@ body {
 
 .points {
     font-weight: bold;
-    color: #a78bfa;
+    color: #9F86B0;
 }
 
 .tournaments {
@@ -667,10 +670,10 @@ body {
 }
 
 .rankings-info {
-    background: linear-gradient(to right, rgba(88, 28, 135, 0.4), rgba(17, 24, 39, 0.6));
+    background: linear-gradient(to right, rgba(81, 60, 98, 0.4), rgba(23, 23, 22, 0.6));
     border-radius: 1rem;
     padding: 2rem;
-    border: 2px solid rgba(124, 58, 237, 0.5);
+    border: 2px solid rgba(81, 60, 98, 0.5);
 }
 
 .info-title {
@@ -688,10 +691,10 @@ body {
 
 /* Footer */
 .footer {
-    border-top: 1px solid rgba(124, 58, 237, 0.3);
+    border-top: 1px solid rgba(81, 60, 98, 0.3);
     padding: 2rem 0;
     margin-top: 5rem;
-    background-color: rgba(17, 24, 39, 0.5);
+    background-color: rgba(23, 23, 22, 0.5);
 }
 
 .footer-content {
