@@ -45,8 +45,8 @@ const About = () => {
                         <h2 className="section-heading">Membership</h2>
                         <div className="membership-info">
                             <p>🎯 <strong>Annual Fee:</strong> $15 per year</p>
-                            <p>✨ <strong>Benefits:</strong> Access to all weekly games, tournament entry discounts, exclusive workshops, and social events</p>
-                            <p>📝 <strong>How to Join:</strong> Visit us at any Thursday session or email us to get started</p>
+                            <p>✨ <strong>Benefits:</strong> Access to all weekly games, exclusive workshops, and social events</p>
+                            <p>📝 <strong>How to Join:</strong> Visit us at any session or email us to get started</p>
                         </div>
                         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
                             <a href="https://westernusc.store/?add-to-cart=174971" target="_blank" rel="noopener noreferrer" className="cta-button">
@@ -136,22 +136,27 @@ const About = () => {
                             <div className="director-card">
                                 <img src={pavImg} alt="Pav" className="director-photo" id="director-pav" />
                                 <p className="director-name">Pav Zykmund</p>
+                                <p className="director-title">Director of Events</p>
                             </div>
                             <div className="director-card">
                                 <img src={kadenImg} alt="Kaden" className="director-photo" id="director-kaden" />
                                 <p className="director-name">Kaden Ali</p>
+                                <p className="director-title">Director of Events</p>
                             </div>
                             <div className="director-card">
                                 <img src={ritaImg} alt="Rita" className="director-photo" id="director-rita" />
                                 <p className="director-name">Rita Shweihat</p>
+                                <p className="director-title">Director of Events</p>
                             </div>
                             <div className="director-card">
                                 <img src={samImg} alt="Sam" className="director-photo" id="director-sam" />
                                 <p className="director-name">Sam Ahn</p>
+                                <p className="director-title">Director of Events</p>
                             </div>
                             <div className="director-card">
                                 <img src={edwardImg} alt="Edward" className="director-photo" id="director-edward" />
                                 <p className="director-name">Edward Dong</p>
+                                <p className="director-title">Director of Events</p>
                             </div>
                         </div>
 
@@ -165,18 +170,22 @@ const About = () => {
                             <div className="director-card">
                                 <img src={cyrusImg} alt="Cyrus" className="director-photo" id="director-cyrus" />
                                 <p className="director-name">Cyrus Bechtold</p>
+                                <p className="director-title">Director of Projects</p>
                             </div>
                             <div className="director-card">
                                 <img src={brockImg} alt="Brock" className="director-photo" id="director-brock" />
                                 <p className="director-name">Brock Suidgeest</p>
+                                <p className="director-title">Director of Projects</p>
                             </div>
                             <div className="director-card">
                                 <img src={rohanImg} alt="Rohan" className="director-photo" id="director-rohan" />
                                 <p className="director-name">Rohan Mandi</p>
+                                <p className="director-title">Director of Projects</p>
                             </div>
                             <div className="director-card">
                                 <img src={jillianImg} alt="Jillian" className="director-photo" id="director-jillian" />
                                 <p className="director-name">Jillian Ouyang</p>
+                                <p className="director-title">Director of Projects</p>
                             </div>
                         </div>
 
@@ -190,6 +199,7 @@ const About = () => {
                             <div className="director-card">
                                 <img src={leoImg} alt="Leo" className="director-photo" id="director-leo" />
                                 <p className="director-name">Leo Panarello</p>
+                                <p className="director-title">Director of External</p>
                             </div>
                         </div>
                     </div>

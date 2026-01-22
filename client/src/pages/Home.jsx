@@ -33,7 +33,7 @@ const Home = ({ navigateTo }) => {
                     <h3 className="card-title">When We Meet</h3>
                     <p className="card-text">
                         <strong>Weekly Sessions:</strong><br />
-                        Alternating Tuesdays and Thursdays, 6:00 PM - 10:00 PM<br />
+                        Tuesdays and Thursdays, 6:00 PM - 10:00 PM<br />
                         <strong>Tournaments:</strong><br />
                         Stay tuned for tournament announcements!
                     </p>
