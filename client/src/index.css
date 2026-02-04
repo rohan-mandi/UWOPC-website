@@ -1071,6 +1071,207 @@ body {
   box-shadow: 0 8px 20px rgba(139, 92, 246, 0.6);
 }
 
+/* Subscribe Section */
+.subscribe-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.subscribe-container {
+  background: linear-gradient(to right, rgba(107, 70, 193, 0.4), rgba(17, 24, 39, 0.6));
+  border-radius: 1.5rem;
+  padding: 3rem;
+  border: 2px solid rgba(107, 70, 193, 0.5);
+  backdrop-filter: blur(4px);
+  text-align: center;
+}
+
+.subscribe-description {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  line-height: 1.75;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Custom Subscribe Form Styles */
+.subscribe-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribe-form {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8B5CF6;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.input-button-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.email-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  background: rgba(17, 24, 39, 0.8);
+  border: 2px solid #6B46C1;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: #9ca3af;
+}
+
+.email-input:focus {
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  background: rgba(17, 24, 39, 0.95);
+}
+
+.email-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscribe-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #7C3AED, #8B5CF6);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #6B46C1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+.subscribe-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.5);
+  border-color: #8B5CF6;
+}
+
+.subscribe-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.subscribe-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.subscribe-arrow {
+  transition: transform 0.3s ease;
+}
+
+.subscribe-button:hover:not(:disabled) .subscribe-arrow {
+  transform: translateX(3px);
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Messages */
+.form-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.success-message {
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid rgba(16, 185, 129, 0.5);
+  color: #10b981;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  border: 2px solid rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+}
+
+.privacy-note {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* Old iframe styles (keep for fallback) */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(17, 24, 39, 0.6);
+  border: 2px solid #6B46C1;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  border-color: #8B5CF6;
+  box-shadow: 0 10px 30px rgba(107, 70, 193, 0.4);
+}
+
+.form-container iframe {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 480px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -1107,5 +1308,29 @@ body {
   .lightbox-close {
     top: 1rem;
     right: 1rem;
+  }
+
+  .subscribe-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .subscribe-description {
+    font-size: 1rem;
+  }
+
+  .input-button-group {
+    flex-direction: column;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 0.5rem;
+  }
+
+  .form-container iframe {
+    height: 400px;
   }
 }
