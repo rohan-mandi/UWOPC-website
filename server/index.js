@@ -75,7 +75,7 @@ app.post('/api/subscribe', async (req, res) => {
 
     try {
         // Microsoft Forms submission URL and field ID
-        const submissionUrl = "https://forms.guest.usercontent.microsoft/formapi/api/ad93a64d-ad0d-4ecd-b2fd-e53ce15965be/users/116e6c7b-2922-4cbe-8194-8c65d3998298/forms('TaaTrQ2tzU6y_eU84VllvntsbhEiKb5MgZSMZdOZgphUQTRKM0hCOTEwVlVGOUtHMFZVUjhXMzFNQS4u')/responses";
+        const submissionUrl = "https://forms.office.com/formapi/api/ad93a64d-ad0d-4ecd-b2fd-e53ce15965be/users/116e6c7b-2922-4cbe-8194-8c65d3998298/forms('TaaTrQ2tzU6y_eU84VllvntsbhEiKb5MgZSMZdOZgphUQTRKM0hCOTEwVlVGOUtHMFZVUjhXMzFNQS4u')/responses";
         const emailFieldId = 'red34c0d891704e8aade2ea5a4c973052';
 
         // Build the form data using Microsoft Forms expected structure
