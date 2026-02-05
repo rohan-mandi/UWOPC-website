@@ -7,6 +7,10 @@
     "dev": "cd client && npm run dev"
   },
   "dependencies": {
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "node-fetch": "^2.7.0",
+    "dotenv": "^17.2.3",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
   }
 }

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Rankings from './pages/Rankings';
 import Gallery from './pages/Gallery';
+import Subscribe from './pages/Subscribe';
 import './index.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       {currentPage === 'about' && <About />}
       {currentPage === 'gallery' && <Gallery />}
       {currentPage === 'rankings' && <Rankings />}
+      {currentPage === 'subscribe' && <Subscribe />}
 
       <footer className="footer">
         <div className="footer-content">

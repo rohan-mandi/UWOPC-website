@@ -6,37 +6,43 @@ module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
     res.setHeader('Cache-Control', 'no-store');
-    
+
     if (req.method === 'OPTIONS') {
         return res.status(200).end();
     }
 
     try {
-        // Path to the Excel file - adjust this to where your file is located
-        const RANKINGS_FILE = path.join(process.cwd(), 'server', 'UWO Poker Club Rankings - 2025-2026.xlsx');
-        
+        // Path to the Excel file in the root directory for Vercel deployment
+        const RANKINGS_FILE = path.join(process.cwd(), 'UWOPC Rankings Reference File.xlsx');
+
         console.log('Reading rankings from:', RANKINGS_FILE);
         const workbook = xlsx.readFile(RANKINGS_FILE);
 
-        const sheetName = 'Club Rankings';
+        // Read from the first sheet (now "Table1215")
+        const sheetName = workbook.SheetNames[0];
+        console.log('Reading from sheet:', sheetName);
         const worksheet = workbook.Sheets[sheetName];
 
+        // Read all data from the Excel file
         const rawData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
 
+        // Row 0 has headers: Rank, Name, Points, GP, Average Performance...
+        // Data starts at row 1 (index 1)
         const rankings = [];
-        for (let i = 3; i < rawData.length; i++) {
+        for (let i = 1; i < rawData.length; i++) {
             const row = rawData[i];
 
-            if (!row || !row[2]) {
+            // Skip empty rows or rows without a name
+            if (!row || !row[1]) {
                 continue;
             }
 
             rankings.push({
-                Rank: row[1],
-                Name: row[2],
-                Points: row[3],
-                GamesPlayed: row[4],
-                AveragePerformance: typeof row[5] === 'number' ? row[5].toFixed(3) : row[5]
+                Rank: row[0],
+                Name: row[1],
+                Points: row[2],
+                GamesPlayed: row[3],
+                AveragePerformance: typeof row[4] === 'number' ? row[4].toFixed(3) : row[4]
             });
         }
 

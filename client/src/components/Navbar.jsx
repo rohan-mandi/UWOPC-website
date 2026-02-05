@@ -56,6 +56,12 @@ const Navbar = ({ currentPage, navigateTo }) => {
                     >
                         Rankings
                     </button>
+                    <button
+                        onClick={() => handleNavClick('subscribe')}
+                        className={`nav-link ${currentPage === 'subscribe' ? 'active' : ''}`}
+                    >
+                        Subscribe
+                    </button>
                 </div>
 
                 <button
@@ -71,6 +77,7 @@ const Navbar = ({ currentPage, navigateTo }) => {
                 <button onClick={() => handleNavClick('about')} className="mobile-link">About</button>
                 <button onClick={() => handleNavClick('gallery')} className="mobile-link">Gallery</button>
                 <button onClick={() => handleNavClick('rankings')} className="mobile-link">Rankings</button>
+                <button onClick={() => handleNavClick('subscribe')} className="mobile-link">Subscribe</button>
             </div>
         </nav>
     );

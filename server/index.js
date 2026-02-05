@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Path to the Excel file
-const RANKINGS_FILE = process.env.RANKINGS_FILE_PATH || path.join(__dirname, 'UWO Poker Club Rankings - 2025-2026.xlsx');
+const RANKINGS_FILE = process.env.RANKINGS_FILE_PATH || path.join(__dirname, 'UWOPC Rankings Reference File.xlsx');
 
 // Helper function to read Excel file
 const readRankings = () => {
@@ -20,31 +20,31 @@ const readRankings = () => {
         console.log('Reading rankings from:', RANKINGS_FILE);
         const workbook = xlsx.readFile(RANKINGS_FILE);
 
-        // Read from the "Club Rankings" sheet which contains the player rankings
-        const sheetName = 'Club Rankings';
+        // Read from the first sheet (formerly "Club Rankings", now "Table1215")
+        const sheetName = workbook.SheetNames[0];
         console.log('Reading from sheet:', sheetName);
         const worksheet = workbook.Sheets[sheetName];
 
         // Read all data from the Excel file
         const rawData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Row 2 has headers: Rank, Name, Points, GP, Average Performance...
-        // Data starts at row 3 (index 3)
+        // Row 0 has headers: Rank, Name, Points, GP, Average Performance...
+        // Data starts at row 1 (index 1)
         const rankings = [];
-        for (let i = 3; i < rawData.length; i++) {
+        for (let i = 1; i < rawData.length; i++) {
             const row = rawData[i];
 
             // Skip empty rows or rows without a name
-            if (!row || !row[2]) {
+            if (!row || !row[1]) {
                 continue;
             }
 
             rankings.push({
-                Rank: row[1],
-                Name: row[2],
-                Points: row[3],
-                GamesPlayed: row[4],
-                AveragePerformance: typeof row[5] === 'number' ? row[5].toFixed(3) : row[5]
+                Rank: row[0],
+                Name: row[1],
+                Points: row[2],
+                GamesPlayed: row[3],
+                AveragePerformance: typeof row[4] === 'number' ? row[4].toFixed(3) : row[4]
             });
         }
 
@@ -75,7 +75,7 @@ app.post('/api/subscribe', async (req, res) => {
 
     try {
         // Microsoft Forms submission URL and field ID
-        const submissionUrl = "https://forms.office.com/formapi/api/ad93a64d-ad0d-4ecd-b2fd-e53ce15965be/users/a1c3d45a-0016-4c28-9ba0-fb480c6997a5/forms('TaaTrQ2tzU6y_eU84VllvlrUw6EWAChMm6D7SAxpl6VUOExMTFBVOTJYNFdMUkZaRlI5WjFWOVc0MS4u')/responses";
+        const submissionUrl = "https://forms.guest.usercontent.microsoft/formapi/api/ad93a64d-ad0d-4ecd-b2fd-e53ce15965be/users/116e6c7b-2922-4cbe-8194-8c65d3998298/forms('TaaTrQ2tzU6y_eU84VllvntsbhEiKb5MgZSMZdOZgphUQTRKM0hCOTEwVlVGOUtHMFZVUjhXMzFNQS4u')/responses";
         const emailFieldId = 'red34c0d891704e8aade2ea5a4c973052';
 
         // Build the form data using Microsoft Forms expected structure

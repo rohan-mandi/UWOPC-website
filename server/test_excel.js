@@ -1,7 +1,7 @@
 const xlsx = require('xlsx');
 const path = require('path');
 
-const EXCEL_FILE = path.join(__dirname, 'rankings.xlsx');
+const EXCEL_FILE = path.join(__dirname, 'UWOPC Rankings Reference File.xlsx');
 
 try {
     console.log('Reading file from:', EXCEL_FILE);

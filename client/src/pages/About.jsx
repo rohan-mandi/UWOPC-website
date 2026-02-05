@@ -15,7 +15,6 @@ import edwardImg from '../../../images/UWOPC TEAM HEADSHOTS/Edward.jpg';
 
 // Import director headshots - Finance Team
 import aidenImg from '../../../images/UWOPC TEAM HEADSHOTS/Aidan Randall Kwong.jpg';
-import ethanImg from '../../../images/UWOPC TEAM HEADSHOTS/Ethan Kim.png';
 import kylerImg from '../../../images/UWOPC TEAM HEADSHOTS/Kyler.jpg';
 
 // Import director headshots - Communications Team
@@ -85,11 +84,7 @@ const About = () => {
                                 <p className="director-name">Aiden Kwong</p>
                                 <p className="director-title">Director of Finance</p>
                             </div>
-                            <div className="director-card">
-                                <img src={ethanImg} alt="Ethan" className="director-photo" id="director-ethan" />
-                                <p className="director-name">Ethan Kim</p>
-                                <p className="director-title">Director of Sponsorships</p>
-                            </div>
+
                             <div className="director-card">
                                 <img src={kylerImg} alt="Kyler" className="director-photo" id="director-kyler" />
                                 <p className="director-name">Kyler See</p>

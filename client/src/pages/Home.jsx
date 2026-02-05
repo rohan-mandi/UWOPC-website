@@ -1,5 +1,4 @@
 import logo from '../assets/uwo-logo.png';
-import SubscribeForm from '../components/SubscribeForm';
 
 const Home = ({ navigateTo }) => {
     return (
@@ -64,18 +63,6 @@ const Home = ({ navigateTo }) => {
                         building friendships, and hosting competitive tournaments throughout the year. Join us to improve your game,
                         meet fellow students, and compete for prizes and glory!
                     </p>
-                </div>
-            </section>
-
-            {/* Subscribe Section */}
-            <section className="subscribe-section">
-                <div className="subscribe-container">
-                    <h2 className="section-title">Subscribe to Our Calendar</h2>
-                    <p className="subscribe-description">
-                        Never miss an event! Subscribe to our calendar to get notifications about upcoming tournaments,
-                        weekly sessions, and special events.
-                    </p>
-                    <SubscribeForm />
                 </div>
             </section>
         </div>
