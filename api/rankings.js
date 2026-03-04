@@ -18,31 +18,36 @@ module.exports = async (req, res) => {
         console.log('Reading rankings from:', RANKINGS_FILE);
         const workbook = xlsx.readFile(RANKINGS_FILE);
 
-        // Read from the first sheet (now "Table1215")
-        const sheetName = workbook.SheetNames[0];
+        // Read from the "Club Rankings" sheet
+        const sheetName = "Club Rankings";
         console.log('Reading from sheet:', sheetName);
         const worksheet = workbook.Sheets[sheetName];
+
+        if (!worksheet) {
+            throw new Error(`Sheet "${sheetName}" not found in Excel file`);
+        }
 
         // Read all data from the Excel file
         const rawData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Row 0 has headers: Rank, Name, Points, GP, Average Performance...
-        // Data starts at row 1 (index 1)
+        // In the new format, headers are on row index 2:
+        // [ null, "Rank", "Name", "Points", "GP", "Performance Rating", ... ]
+        // Data starts at row index 3
         const rankings = [];
-        for (let i = 1; i < rawData.length; i++) {
+        for (let i = 3; i < rawData.length; i++) {
             const row = rawData[i];
 
             // Skip empty rows or rows without a name
-            if (!row || !row[1]) {
+            if (!row || !row[2]) {
                 continue;
             }
 
             rankings.push({
-                Rank: row[0],
-                Name: row[1],
-                Points: row[2],
-                GamesPlayed: row[3],
-                AveragePerformance: typeof row[4] === 'number' ? row[4].toFixed(3) : row[4]
+                Rank: row[1],
+                Name: row[2],
+                Points: row[3],
+                GamesPlayed: row[4],
+                AveragePerformance: typeof row[5] === 'number' ? row[5].toFixed(3) : row[5]
             });
         }
 
