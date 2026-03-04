@@ -596,10 +596,12 @@ body {
 /* Communications Team */
 #director-ohemaa {
   object-position: center center;
+  transform: rotate(90deg);
 }
 
 #director-eduard {
   object-position: center center;
+  transform: rotate(90deg);
 }
 
 #director-ben {
