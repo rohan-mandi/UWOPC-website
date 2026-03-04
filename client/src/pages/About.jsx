@@ -12,6 +12,7 @@ import kadenImg from '../../../images/UWOPC TEAM HEADSHOTS/Kaden (2).jpg';
 import ritaImg from '../../../images/UWOPC TEAM HEADSHOTS/Rita.jpg';
 import samImg from '../../../images/UWOPC TEAM HEADSHOTS/Sam.jpg';
 import edwardImg from '../../../images/UWOPC TEAM HEADSHOTS/Edward.jpg';
+import mattImg from '../../../images/UWOPC TEAM HEADSHOTS/Matthew_Barclay.jpeg';
 
 // Import director headshots - Finance Team
 import aidenImg from '../../../images/UWOPC TEAM HEADSHOTS/Aidan Randall Kwong.jpg';
@@ -151,6 +152,11 @@ const About = () => {
                             <div className="director-card">
                                 <img src={edwardImg} alt="Edward" className="director-photo" id="director-edward" />
                                 <p className="director-name">Edward Dong</p>
+                                <p className="director-title">Director of Events</p>
+                            </div>
+                            <div className="director-card">
+                                <img src={mattImg} alt="Matt" className="director-photo" id="director-matt" />
+                                <p className="director-name">Matt Barclay</p>
                                 <p className="director-title">Director of Events</p>
                             </div>
                         </div>
